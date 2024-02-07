@@ -7,6 +7,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '~/bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
+      'vue-router': path.resolve(__dirname, 'node_modules/vue-router/dist/vue-router.global.js')
     }
   }
 })
