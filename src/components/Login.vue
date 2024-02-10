@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    Login is working
+    Sustituir por componente de Domingo
     <button id="login"> Login button</button>
 </template>
 
