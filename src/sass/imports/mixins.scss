@@ -1,0 +1,9 @@
+/* mixins */
+
+@mixin set_highlight_bg() {
+    background: $highlight;
+}
+
+@mixin set_highlight() {
+    color: $highlight;
+}

@@ -1,4 +1,7 @@
-@import 'sass/posts', 'sass/map';
+@import 'sass/header','sass/posts', 'sass/map', 'sass/calendar';
+@import 'sass/imports/variables', 'sass/imports/mixins';
+
+
 
 * {
   padding:0;
@@ -6,6 +9,16 @@
   box-sizing: border-box;
 }
 
+
 #root {
-  background:#f3f3f3;
+  // background:#f3f3f3;
+  font-family:'Poppins';
+}
+
+.highlight {
+  @include set_highlight();
+}
+
+.active {
+  color: $highlight !important;
 }

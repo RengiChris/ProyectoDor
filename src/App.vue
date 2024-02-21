@@ -1,10 +1,11 @@
 <script setup>
-  import {currentView} from './router.js'
-  import Header from './components/micro/Header.vue'
+  import {routes, currentView, currentPath} from './router.js'
+  import Header from './components/common/Header.vue'
+
 </script>
 
 <template>
-  <Header/>
+  <Header :path="currentPath" :routes="routes" />
   <component :is="currentView" />
 </template>
 

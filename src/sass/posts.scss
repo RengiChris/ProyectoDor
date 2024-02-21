@@ -1,6 +1,72 @@
-@import 'variables', 'mixins';
+@import 'imports/variables', 'imports/mixins';
+
+#post {
+    font-family: 'Poppins';
+    background:red !important;
+}
+
+.post {
+    border:none !important;
+}
+
+.post .post-header {
+    // background:red;
+    padding:10px 0px;
+   
+    
+    .tiny-column {
+        width:5%;
+        // background:gray;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        button {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            // background:blue;
+            width:fit-content !important;
+            border:none;
+            font-size:1.8rem;
+        }
+    }
+    .column {
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        .texts {
+            // background:red;
+            margin:0;
+            width:100%;
+            p {
+                // background:gray;
+                margin-left:10px;
+                margin-bottom:0px;
+                font-size:.95rem;
+                font-weight:bold;
+                text-transform:lowercase;
+    
+            }
+            small {
+                font-size:.8rem;
+                margin-left: 10px;
+            }
+        }
+      
+        img {
+            width:50px;
+            height:50px;
+            border-radius:50%;
+            object-fit:cover !important;
+            // background:green;
+        }
+    }
+}
 
 
-#login {
-    background:red;
+
+.widget {
+    margin-top:20px;
+    border:none !important;
 }

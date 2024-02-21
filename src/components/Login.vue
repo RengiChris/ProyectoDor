@@ -3,8 +3,9 @@
 </script>
 
 <template>
-    Sustituir por componente de Domingo
-    <button id="login"> Login button</button>
+    <div class="p-3 pt-0">
+        Sustituir por componente de Domingo
+    </div>
 </template>
 
 <style scoped>
