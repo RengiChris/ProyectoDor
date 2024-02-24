@@ -20,7 +20,6 @@
                 <span v-if="type == 'Oferta'" class="badge d-flex align-items-center text-verdeApp bg-secondary border border-verdeApp rounded-pill letraBadge">{{ type }}</span>
                 <span v-if="type == 'Evento'" class="badge d-flex align-items-center text-yellow bg-secondary border border-yellow rounded-pill letraBadge">{{ type }}</span>
                 <span v-if="type == 'Info'" class="badge d-flex align-items-center text-blue bg-secondary border border-blue rounded-pill letraBadge">{{ type }}</span>
-                <!-- Ver por que no me hace el wrap en las etiquetas -->
                 <div class="d-flex justify-content-center align-items-center etiquetas">
                     <p v-for="(valor, clave) in tags" class="tag"> {{ valor }}</p>
                 </div>
