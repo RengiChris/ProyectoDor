@@ -1,21 +1,17 @@
 <script setup>
-import NavBar from './components/NavBar.vue';
-import ProfilePicture from './components/ProfilePicture.vue';
-import Post from './components/Post.vue';
-// import { posts } from './assets/posts';
-// const postsActuales = posts;
+    import Post from "../../components/Post.vue";
+    import ProfilePicture from "../../components/ProfilePicture.vue";
+    import { posts } from '../../assets/posts';
+    const postsActuales = posts;
 </script>
-
 <template>
-  <NavBar />
-  
-  <router-view></router-view>
-  <!-- <div class="d-flex flex-column justify-content-center align-items-center">
+    <div class="d-flex flex-column justify-content-center align-items-center">
     <section class="profileData mt-3 d-flex w-100 flex-column flex-md-row justify-content-center align-items-center">
       <ProfilePicture source="/perfil.webp"/>
       <article class="card profile">
         <section class="card-body">
           <p class="titulo"><span class="negrita">Última Informática</span></p>
+          <router-link to="/edit_form"><button>Editar</button></router-link>
           <p class="desc">Empresa de asesoramiento en montaje de equipos informáticos a medida y venta de periféricos, ¡Te garantizamos el mejor precio de canarias!</p>
           <p><span class="negrita">Email: </span>info@ultima_informatica.com</p>
           <p><span class="negrita">Teléfono: </span>922876765</p>
@@ -32,9 +28,8 @@ import Post from './components/Post.vue';
         </div> 
       </div>
     </section>
-  </div> -->
+  </div>
 </template>
-
 <style scoped>
-
+    @import "./style.css";
 </style>
