@@ -11876,6 +11876,18 @@ body * {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
+button {
+  border-radius: 5px;
+  background-color: #48B89F;
+  color: #fff;
+  border: none;
+  transition: 0.25s;
+}
+
+button:hover {
+  filter: brightness(120%);
+}
+
 nav {
   height: 7vh;
   width: 100%;
@@ -12032,7 +12044,7 @@ a.active {
 }
 
 .profilePic {
-  background-color: #E9ECEF;
+  background-color: #48B89F;
   padding: 0.5rem;
   width: 12rem;
   height: 12rem;
@@ -12063,6 +12075,11 @@ a.active {
   flex-direction: column;
   justify-content: space-evenly;
   min-height: 16rem;
+}
+
+#editDiv {
+  display: flex;
+  justify-content: end;
 }
 
 h3, .h3 {
