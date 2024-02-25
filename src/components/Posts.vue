@@ -1,64 +1,41 @@
 <script setup>
-  import PostDiv from './posts/PostDiv.vue'
+  import CrearPost from './posts/CrearPost.vue'
   import Post from './posts/Post.vue';
   import Filter from './posts/widgets/Filter.vue';
-  import Widget from './posts/widgets/Widget.vue';
   import Calendar from './posts/widgets/Calendar.vue';
-  import {posts, tags, prioridades} from './../assets/js/posts.js';
+  import {posts, tags, prioridades, postsDates, postsPerDate} from './../assets/js/posts.js';
+  import Hashtags from './posts/widgets/Hashtags.vue';
 
-  const login = true;
-  if(!login) {
-    window.location.assign('#/login');
-  }
   let tag_list = tags();
   let lista_prioridades = prioridades();
-  lista_prioridades.push('Todos');
+  let postsDatesList = postsDates();
 
 </script>
 
 <template>
    <div class="home container-fluid">
     <div class="row">
-      <!-- Left side -->
-      <div id="left_bar" class="col col-sm-3"></div>
-      <!-- Center -->
-      <div id="posts" class="col col-sm-5">
-        <PostDiv />
-        <Filter :filtrado="lista_prioridades"/>
-        <Filter :filtrado="tag_list"/>
+      <div id="left_bar" class="col col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+        <Hashtags :title="'Trends'"  :desc="'Lo más popular'" :list="tags()" :type="'tendencias'" />
+      </div>
+      <div id="posts" class="col col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-6">
+        <CrearPost />
+        <Filter :filtrado="lista_prioridades" :text="'Feed por Prioridad'"/>
+        <Filter :filtrado="tag_list" :text="'Feed por tus Gustos'"/>
         <div v-for="post in posts">
-          <Post 
-            :event="post"
-            />
+          <Post :post="post" />
         </div>
       </div>
-      <!-- Right side -->
-      <div class="col col-sm-3">
-        <Widget 
-          :title="'Eventos'"
-          :desc="'¿Buscas eventos?'"
-          :type="'relacionados'"
-          :button_desc="'Encontrar más eventos'"
-          :button_url="'https://localhost:5173/#/'"
-         />
-         <Widget 
-          :title="'Trends'"
-          :desc="'Lo más popular'"
-          :list="tags()"
-          :type="'tendencias'"
-         />
-
-         <Calendar 
-         :title="'Eventos Próximos'"
-         :desc="''" 
-         />
+      <div class="col col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+         <Calendar :title="'Eventos Próximos'" :posts="posts" :dates="postsDatesList" :post_per_date="postsPerDate" :desc="''" />
       </div>
     </div>
    </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+  @import './src/sass/imports/variables', './src/sass/imports/mixins';
   .home {
-    background:#f7f7f7;
+    background: #F7F7F7;
   }
 </style>

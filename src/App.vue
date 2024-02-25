@@ -1,14 +1,8 @@
 <script setup>
-  import {routes, currentView, currentPath} from './router.js'
-  import Header from './components/common/Header.vue'
-
+  /*todo*/
 </script>
-
 <template>
-  <Header :path="currentPath" :routes="routes" />
-  <component :is="currentView" />
+  <Suspense>
+    <router-view></router-view>
+  </Suspense>
 </template>
-
-<style scoped>
-
-</style>

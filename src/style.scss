@@ -1,18 +1,17 @@
-@import 'sass/header','sass/posts', 'sass/map', 'sass/calendar';
-@import 'sass/imports/variables', 'sass/imports/mixins';
-
-
+@import "sass/imports/variables", "sass/imports/mixins";
 
 * {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-
 #root {
-  // background:#f3f3f3;
-  font-family:'Poppins';
+  font-family: "Poppins";
+}
+
+.widget {
+  margin-top: 20px;
 }
 
 .highlight {

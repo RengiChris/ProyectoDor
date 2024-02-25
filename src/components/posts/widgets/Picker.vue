@@ -1,16 +1,15 @@
 <script setup>  
-import {ref} from 'vue';
+  import {ref} from 'vue';
   import {Picker} from 'emoji-mart';
-  import data from '@emoji-mart/data'
 
-  const props = defineProps([
-    'picker', 'target', 'handler'
-  ])
+  const props = defineProps({
+    picker: String, 
+    target: String, 
+    handler: String
+  })
 
-  let currentPicker = props.picker;
   let status = ref(false);
   const addEmoji = (emoji) => {
-    console.log(emoji);
     let target = props.target;
     document.getElementById(target).value += emoji.native + "";
   }
@@ -18,15 +17,12 @@ import {ref} from 'vue';
   const showPicker = () => {
     let posX = document.getElementById(props.target).getBoundingClientRect().x;
     let posY = document.getElementById(props.target).getBoundingClientRect().y;
-    console.log(posX, ' ', posY)
     if(status.value) {
         picker.style.display = "none";
         status.value = false;
-        console.log(status);
     } else {
         picker.style.display = "flex";
         status.value = true;
-        console.log(status);
     }
   }
 
@@ -35,13 +31,14 @@ import {ref} from 'vue';
       picker.style.display = "none";
       status.value = false;
     }
-  } )
+  })
   
   const pickerOptions = { onEmojiSelect: addEmoji }
   const picker = new Picker(pickerOptions);
 
   document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById(props.handler).addEventListener('click', () => {
+    document.getElementById(props.handler).addEventListener('click', (e) => {
+        e.preventDefault();
         showPicker();
     })
 
@@ -52,11 +49,9 @@ import {ref} from 'vue';
     picker.style.left = `calc(${posX}px - 20px)`;
     picker.style.top = `calc(${posY}px + ${espaciado}px)`;
     document.body.appendChild(picker);
+
   });
-
-
 </script>
-<template></template>
 <style>
   .customPicker {
     display: none;
