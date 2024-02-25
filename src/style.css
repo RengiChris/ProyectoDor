@@ -11933,7 +11933,7 @@ img.icon {
   margin: 0 !important;
 }
 
-.icon:hover, .home:hover {
+.icon:not(.iconVerde):hover, .home:hover {
   cursor: pointer;
   background-color: #E9ECEF;
 }
@@ -11946,6 +11946,14 @@ img.icon {
   transition: all 0.5s ease-in-out;
   padding: 0;
   width: 2.3rem;
+}
+
+.iconVerde {
+  background-color: #48B89F;
+}
+
+.iconVerde:hover {
+  filter: brightness(120%);
 }
 
 .left {
@@ -12029,14 +12037,6 @@ a.active {
 .letraBadge {
   font-size: 0.85em;
   padding: 0.5rem;
-}
-
-.profilePic {
-  background-color: #E9ECEF;
-  padding: 0.5rem;
-  width: 12rem;
-  height: 12rem;
-  border-radius: 50%;
 }
 
 .card {

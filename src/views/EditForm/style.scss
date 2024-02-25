@@ -28,9 +28,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-
 .foto{
     cursor: pointer;
 }
@@ -58,17 +55,21 @@ article{
   font-size: 1.1em;
 }
 .textArea{
-    margin-bottom: 0.5rem   
+    margin-bottom: 1rem   
 }
 .fila{
     display: flex;
     width: 100%;
-    margin-bottom: 0.5rem 
+    margin-bottom: 1rem 
 
+}
+input, textarea, select{
+    border:1px solid $grisHover ;
 }
 .fila input{
     width: 100%;
     margin-left: 0.5rem;
+    
 }
 
 .desc{
@@ -77,22 +78,23 @@ article{
 }
 .titulo{
   font-size: 1.5em;
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .profile{
   max-width: 95vw;
 }
 .profilePic{
-    background-color: $verde;
+    background-color: $grisHover;
     padding: 0.5rem;
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
   }
 #saveDiv{
+  margin-top: 1rem;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 }
 button{
     border-radius: 5px;
@@ -103,6 +105,9 @@ button{
   }
   button:hover{
     filter: brightness(120%);
+  }
+  .btnBorrar{
+    background-color: $danger;
   }
 @media screen and (width >= 576px){
   .botones{

@@ -28,14 +28,14 @@
                     <div class="fila">
 
                         <select name="" id="">
-                            <option value="">Categoría</option>
-                            <option value="">Tienda de Informática</option>
+                            <option value="" selected>Tienda de Informática</option>
                             <option value="">Tiendo de Ropa</option>
                             <option value="">Ferretería</option>
                         </select>
                     </div>
                     <div id="saveDiv">
                         <router-link to="/"><DefaultButton value="Guardar" /></router-link>
+                        <DefaultButton value="Borrar Cuenta" class="btnBorrar"/>
                     </div>
                     
                     

@@ -83,7 +83,7 @@ img.icon{
   padding: 0.25rem;
   margin: 0 !important;
 }
-.icon:hover, .home:hover{
+.icon:not(.iconVerde):hover, .home:hover{
   cursor: pointer;
   background-color: $grisHover;
 }
@@ -95,6 +95,12 @@ img.icon{
   transition: all .5s ease-in-out;
   padding: 0;
   width: 2.3rem;
+}
+.iconVerde{
+  background-color: $verde;
+}
+.iconVerde:hover{
+    filter: brightness(120%);
 }
 .left{
   display: flex;
@@ -166,13 +172,13 @@ a.active{
   font-size: 0.85em;
   padding: 0.5rem;
 }
-.profilePic{
-  background-color: $grisHover;
-  padding: 0.5rem;
-  width: 12rem;
-  height: 12rem;
-  border-radius: 50%;
-}
+// .profilePic{
+//   background-color: $grisHover;
+//   padding: 0.5rem;
+//   width: 12rem;
+//   height: 12rem;
+//   border-radius: 50%;
+// }
 .card{
   margin-top: 1.5rem;
 }
@@ -250,6 +256,7 @@ article{
   .profilePic{
     width: 18rem;
     height: 18rem;
+    
   }
   .profileData{
     align-items: center;

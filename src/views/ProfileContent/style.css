@@ -4,7 +4,6 @@
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11872,10 +11871,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body * {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-}
-
 button {
   border-radius: 5px;
   background-color: #48B89F;
@@ -11888,163 +11883,8 @@ button:hover {
   filter: brightness(120%);
 }
 
-nav {
-  height: 7vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  border-bottom: solid 1px #E9ECEF;
-  padding: 0.5rem;
-}
-
-nav img {
-  width: 6rem;
-  max-height: 90%;
-  padding-left: 1rem;
-}
-
-.botones {
-  display: flex;
-  position: fixed;
-  justify-content: space-evenly;
-  align-items: center;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  height: 7vh;
-  background-color: #fff;
-}
-
-body {
-  background-color: #f7f7f7;
-}
-
-.icon {
-  width: 3rem;
-  padding: 0.5rem;
-  background-color: #f6f7fa;
-  border-radius: 100%;
-  margin: 0 0.5rem;
-}
-
-.home {
-  width: 3.5rem;
-  padding: 0.5rem;
-  border-radius: 100%;
-  margin: 0 0.5rem;
-  position: relative;
-  left: 0.75rem;
-}
-
-img.icon {
-  height: 3rem !important;
-  padding: 0.25rem;
-  margin: 0 !important;
-}
-
-.icon:hover, .home:hover {
-  cursor: pointer;
-  background-color: #E9ECEF;
-}
-
-.icon-active {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-right: 0;
-  padding-right: 0;
-  transition: all 0.5s ease-in-out;
-  padding: 0;
-  width: 2.3rem;
-}
-
-.left {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: auto;
-}
-
-.left > a {
-  text-decoration: none;
-  color: black;
-}
-
-a.active {
-  color: #48B89F;
-  font-weight: 600;
-  transition: all 0.3 ease-in-out;
-}
-
-.left > * {
-  margin: 0.5rem;
-}
-
-.buscador {
-  display: flex;
-  align-items: center;
-  transition: all 0.5s ease-in-out;
-}
-
-.SearchBar-active {
-  height: 90% !important;
-  border: 5px solid #f6f7fa !important;
-  background-color: white;
-  border-top-right-radius: 5%;
-  border-bottom-right-radius: 5%;
-  max-width: 250px !important;
-  padding-left: 0.5rem;
-  caret-color: #48B89F;
-}
-
-.SearchBar {
-  transition: max-width 0.5s ease-in-out;
-  max-width: 0;
-  height: 0;
-  border: none;
-  margin-right: -0.25rem;
-  pointer-events: none;
-}
-
-.buscador > input:focus {
-  outline: none;
-  border: 5px solid #48B89F !important;
-}
-
-.notification {
-  height: 100%;
-  margin-right: -1.5rem;
-}
-
-.badgeNotification {
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75em;
-  height: 1rem;
-  width: 1rem;
-  position: relative;
-  top: 0.5rem;
-  right: 0.25rem;
-  color: #fff;
-}
-
-.badge {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.letraBadge {
-  font-size: 0.85em;
-  padding: 0.5rem;
-}
-
 .profilePic {
-  background-color: #48B89F;
+  background-color: #E9ECEF;
   padding: 0.5rem;
   width: 12rem;
   height: 12rem;
@@ -12052,22 +11892,22 @@ a.active {
 }
 
 .card {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem !important;
 }
 
 .posts {
-  width: 95%;
-  margin-bottom: 9vh;
+  width: 95% !important;
+  margin-bottom: 9vh !important;
 }
 
 .card {
-  min-width: 24rem;
+  min-width: 24rem !important;
 }
 
 .card > img {
-  height: 16rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 16rem !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
 }
 
 .card-body {
@@ -12126,12 +11966,6 @@ article {
 }
 
 @media screen and (width >= 576px) {
-  .botones {
-    position: static;
-    width: auto;
-    padding-right: 1rem;
-    max-height: 100%;
-  }
   .card {
     margin-top: 0;
     margin-left: 1.5rem;
@@ -12169,21 +12003,5 @@ article {
   }
   .tarjetas {
     justify-content: start;
-  }
-}
-@media screen and (width <= 430px) {
-  .left {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    justify-content: space-between;
-  }
-  .left > img {
-    padding: 0;
-    margin: 0;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -34,7 +34,7 @@ window.addEventListener("resize", ()=>{
         </div>
         <div class="botones">
             <SearchBar />
-            <UserIcon class="icon" :imagen="imagen" />
+            <UserIcon class="icon iconVerde" :imagen="imagen" />
             <NotificationIcon class="icon" cantidad="2"/>
             <SettingsIcon class="icon" />
         </div>
