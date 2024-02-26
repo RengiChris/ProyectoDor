@@ -30,3 +30,35 @@ const mostrarBuscador = (e)=>{
         <input type="text" class="SearchBar">
     </div>
 </template>
+<style scoped lang="scss">
+@import "../style.scss";
+.buscador{
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.SearchBar-active{
+  height: 90% !important;
+  border: 5px solid $tertiary !important;
+  background-color: white;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+  max-width: 250px !important;
+  padding-left: 0.5rem;
+  caret-color: $verde;
+  margin-right: 0.5em !important;
+  pointer-events: all !important;
+}
+.SearchBar{
+  transition: max-width 0.5s ease-in-out;
+  max-width: 0;
+  height: 0;
+  border: none;
+  margin-right: -0.25rem;
+  pointer-events: none;
+}
+.buscador>input:focus{
+  outline: none;
+  border: 5px solid $verde !important;
+}
+</style>

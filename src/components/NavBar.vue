@@ -40,3 +40,78 @@ window.addEventListener("resize", ()=>{
         </div>
     </nav>
 </template>
+<style scoped lang="scss">
+@import "../style.scss";
+nav{
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary;
+  border-bottom: solid 1px #E9ECEF;
+  padding: 0.5rem;
+}
+nav img{
+  width: 6rem;
+  max-height: 90%;
+  padding-left: 1rem;
+}
+.botones{
+  display: flex;
+  position: fixed;
+  justify-content: space-evenly;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 7vh;
+  background-color: $primary;
+}
+.home{
+  width: 3.5rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+  margin: 0 0.5rem;
+  position: relative;
+  left: 0.75rem;
+}
+.home:hover{
+  cursor: pointer;
+  background-color: $grisHover;
+}
+.left{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+.left>img{
+    padding: 0;
+    margin: 0;
+  }
+.left>a{
+  text-decoration: none;
+  color: black;
+}
+.left>*{
+  margin: 0.5rem;
+}
+@media screen and (width >= 576px){
+  .botones{
+    position: static;
+    width: auto;
+    padding-right: 1rem;
+    max-height: 100%
+  }
+  nav{
+    justify-content: space-between;
+  }
+  .left{
+    align-items: center;
+    width: auto;
+  }
+}
+</style>

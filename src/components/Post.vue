@@ -29,3 +29,43 @@
     </div>
 </div>
 </template>
+<style scoped lang="scss">
+@import "../style.scss";
+.card{
+  margin-top: 1.5rem;
+  min-width: 24rem;
+}
+.card>img{
+  height: 16rem;
+  object-fit: cover;
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 16rem;
+}
+.tag{
+  color: #495057;
+  font-size: 0.75em;
+  margin-bottom: 0;
+  margin-right: 0.25em;
+}
+.etiquetas{
+  flex-wrap: wrap;
+}
+
+@media screen and (width >= 576px){
+  .card{
+    margin-top: 0;
+    margin-left: 1.5rem;
+  }
+  .col{
+    margin-bottom: 2rem;
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+}
+</style>
