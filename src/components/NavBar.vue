@@ -86,6 +86,7 @@ nav img{
     width: 100%;
     margin: 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 .left>img{
@@ -110,7 +111,6 @@ nav img{
     justify-content: space-between;
   }
   .left{
-    align-items: center;
     width: auto;
   }
 }
