@@ -3,12 +3,13 @@
 @import "../node_modules/bootstrap/scss/variables-dark";
 
 $primary: #fff;
-$secondary: #f7f7f7;
-$tertiary: #f6f7fa;
-$verde:#48B89F;
+$secondary: #f3f3f3;
+$tertiary: #CECECE;
+$verde: #80ED99;
+$verdeTexto:#227a4a;
 $grisHover: #E9ECEF;
-$azul: #488bb5;
-$amarillo: #b29547;
+$azul: #22577A;
+$amarillo: #6a7a22;
 
 //Mixins
 @mixin flex-wFh7{
@@ -34,7 +35,8 @@ $theme-colors: (
 );
 
 $custom-colors: (
-  "verdeApp": $verde,
+  "verdeApp": $verdeTexto,
+  "verdeText": $verdeTexto,
   "gris": $grisHover,
   "blue": $azul,
   "yellow": $amarillo

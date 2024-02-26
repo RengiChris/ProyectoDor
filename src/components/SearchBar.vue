@@ -39,13 +39,13 @@ const mostrarBuscador = (e)=>{
 }
 .SearchBar-active{
   height: 90% !important;
-  border: 5px solid $tertiary !important;
+  border: 5px solid $secondary !important;
   background-color: white;
   border-top-right-radius: 5%;
   border-bottom-right-radius: 5%;
   max-width: 250px !important;
   padding-left: 0.5rem;
-  caret-color: $verde;
+  caret-color: $verdeTexto;
   margin-right: 0.5em !important;
   pointer-events: all !important;
 }
@@ -59,6 +59,6 @@ const mostrarBuscador = (e)=>{
 }
 .buscador>input:focus{
   outline: none;
-  border: 5px solid $verde !important;
+  border: 5px solid $verdeTexto !important;
 }
 </style>

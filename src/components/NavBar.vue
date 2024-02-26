@@ -60,7 +60,7 @@ nav img{
   position: fixed;
   justify-content: space-evenly;
   align-items: center;
-  bottom: 0;
+  bottom: -0.1%;
   left: 0;
   z-index: 10;
   background-color: $primary;
@@ -73,7 +73,7 @@ nav img{
 }
 .home:hover{
   cursor: pointer;
-  background-color: $grisHover;
+  background-color: $secondary;
 }
 .left{
     height: 100%;

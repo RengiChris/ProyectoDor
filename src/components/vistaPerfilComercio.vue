@@ -18,7 +18,7 @@ const postsActuales = posts;
           <p><span class="negrita">Email: </span>info@ultima_informatica.com</p>
           <p><span class="negrita">Teléfono: </span>922876765</p>
           <p><span class="negrita">Dirección: </span>C/ Carlos Francisco Lorenzo Navarro, 23, 38760, Los Llanos de Aridane</p>
-          <span class="badge d-flex align-items-center text-verdeApp bg-secondary border border-verdeApp rounded-pill letraBadge">Tienda de Informática</span>
+          <span class="badge d-flex align-items-center text-verdeApp bg-primary border border-verdeApp rounded-pill letraBadge">Tienda de Informática</span>
         </section>
       </article>
     </section>
