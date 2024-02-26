@@ -43,9 +43,7 @@ window.addEventListener("resize", ()=>{
 <style scoped lang="scss">
 @import "../style.scss";
 nav{
-  height: 7vh;
-  width: 100%;
-  display: flex;
+  @include flex-wFh7;
   justify-content: center;
   align-items: center;
   background-color: $primary;
@@ -58,22 +56,18 @@ nav img{
   padding-left: 1rem;
 }
 .botones{
-  display: flex;
+  @include flex-wFh7;
   position: fixed;
   justify-content: space-evenly;
   align-items: center;
   bottom: 0;
   left: 0;
-  width: 100%;
   z-index: 10;
-  height: 7vh;
   background-color: $primary;
 }
 .home{
+  @include padding-margin-br100;
   width: 3.5rem;
-  padding: 0.5rem;
-  border-radius: 100%;
-  margin: 0 0.5rem;
   position: relative;
   left: 0.75rem;
 }

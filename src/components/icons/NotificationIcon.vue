@@ -13,21 +13,17 @@ const props = defineProps({
 <style scoped lang="scss">
 @import "../../style.scss";
 .icon{
+  @include padding-margin-br100;
   width: 3rem;
-  padding: 0.5rem;
   background-color: $tertiary;
-  border-radius: 100%;
-  margin: 0 0.5rem
 }
 .icon:hover{
   cursor: pointer;
   background-color: $grisHover;
 }
 .badgeNotification{
+  @include fullCenter;
   border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 0.75em;
   height: 1rem;
   width: 1rem;

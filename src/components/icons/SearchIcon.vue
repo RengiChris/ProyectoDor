@@ -9,11 +9,9 @@ const props = defineProps({
 <style scoped lang="scss">
 @import "../../style.scss";
 .icon{
+  @include padding-margin-br100;
   width: 3rem;
-  padding: 0.5rem;
   background-color: $tertiary;
-  border-radius: 100%;
-  margin: 0 0.5rem
 }
 .icon:hover{
   cursor: pointer;
