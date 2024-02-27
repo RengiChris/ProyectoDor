@@ -1,3 +1,5 @@
+export let avatarHombre = () =>  `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 18 + 1)}.jpg`; 
+export let avatarMujer = () => `https://randomuser.me/api/portraits/women/${Math.floor(Math.random() * 18 + 1)}.jpg`; 
 export const posts = [
   {
     id: 0,
@@ -18,26 +20,17 @@ export const posts = [
     comments: [
       {
         usuario: "leticia",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "¿Qué tal el código?",
+        thumb: avatarMujer(),
+        comentario: "¿Qué libros tenéis en el pack?",
       },
       {
         usuario: "patricia",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "Me encanta!",
+        thumb: avatarMujer(),
+        comentario: "¡Me encantó la oferta!",
       },
       {
         usuario: "Leonor",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
+        thumb: avatarMujer(),
         comentario: "A mi no me gustó mucho...",
       },
     ],
@@ -55,33 +48,24 @@ export const posts = [
     prioridad: "seguidos",
     thumb:
       "https://images.unsplash.com/photo-1550534790-5724c29d08f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Tenemos 2x1 en libros de Programación, disponible ya, no dudes en consultar!",
+    desc: "¡Abrimos nueva sucursal en Breña Alta! Encuéntranos en la Carretera Zumocar Reteras Km 35.",
     likes: 0,
     share: "ejemplo.html",
     comments: [
       {
-        usuario: "leticia",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "¿Qué tal el código?",
+        usuario: "carmen",
+        thumb: avatarMujer(),
+        comentario: "¿Tenéis alguna promoción de apertura?",
       },
       {
         usuario: "patricia",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "Me encanta!",
+        thumb: avatarMujer(),
+        comentario: "¿La tienda anterior cierra?",
       },
       {
-        usuario: "Leonor",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "A mi no me gustó mucho...",
+        usuario: "bazar_hermanos",
+        thumb: "https://plus.unsplash.com/premium_photo-1677534712570-5c6f50ea3703?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        comentario: "La tienda anterior permanecerá abierta, mismo horario",
       },
     ],
   },
@@ -96,36 +80,26 @@ export const posts = [
     date_start: "2/25/2024",
     tag: "Anime",
     prioridad: "seguidos",
-
     thumb:
       "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Tenemos 2x1 en libros de Programación, disponible ya, no dudes en consultar!",
+    desc: "¡Disponible ya en tienda, no dudes en consultar!",
     likes: 0,
     share: "ejemplo.html",
     comments: [
       {
-        usuario: "leticia",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "¿Qué tal el código?",
+        usuario: "marcos",
+        thumb: avatarHombre(),
+        comentario: "¿Tenéis mercancía de Rol?",
       },
       {
         usuario: "patricia",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "Me encanta!",
+        thumb: avatarMujer(),
+        comentario: "¡Ya tengo regalo para mi novio!",
       },
       {
-        usuario: "Leonor",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "A mi no me gustó mucho...",
+        usuario: "martina",
+        thumb: avatarMujer(),
+        comentario: "¿Trabajáis con cosplays?",
       },
     ],
   },
@@ -158,29 +132,21 @@ export const posts = [
     share: "ejemplo.html",
     comments: [
       {
-        usuario: "leticia",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "¿Qué tal el código?",
+        usuario: "mary",
+        thumb: avatarMujer(),
+        comentario: "We don't have too much time on the Island but such a wonderful experience! We hope to be back to this days!",
       },
       {
-        usuario: "patricia",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "Me encanta!",
+        usuario: "aridane+quenunca",
+        thumb: "https://aridane.org/ciudad/wp-content/uploads/2022/07/ABI3551-scaled.jpg",
+        comentario: "We're glad of your visit, You're welcome!",
       },
       {
-        usuario: "Leonor",
-        thumb:
-          "https://randomuser.me/api/portraits/women/" +
-          Math.floor(Math.random() * 18 + 1) +
-          ".jpg",
-        comentario: "A mi no me gustó mucho...",
+        usuario: "carlos",
+        thumb: avatarHombre(),
+        comentario: "¿Habrá romería?",
       },
+    
     ],
   },
   {
@@ -202,12 +168,12 @@ export const posts = [
     comments: [
       {
         usuario: "Juan Moda",
-        thumb: "https://example.com/avatar2.jpg",
+        thumb:  avatarHombre(),
         comentario: "¡Qué emocionante! Estaré allí sin falta.",
       },
       {
         usuario: "Ana Fashion",
-        thumb: "https://example.com/avatar3.jpg",
+        thumb: avatarMujer(),
         comentario: "¡No puedo esperar para ir de compras!",
       },
     ],
@@ -231,12 +197,12 @@ export const posts = [
     comments: [
       {
         usuario: "Laura Café",
-        thumb: "https://example.com/avatar5.jpg",
+        thumb: avatarMujer(),
         comentario: "¡Qué genial! ¡Nos vemos allí!",
       },
       {
         usuario: "David Bohemio",
-        thumb: "https://example.com/avatar6.jpg",
+        thumb: avatarHombre(),
         comentario: "¡No me lo perdería por nada del mundo!",
       },
     ],
@@ -261,12 +227,12 @@ export const posts = [
     comments: [
       {
         usuario: "Andrés Tech",
-        thumb: "https://example.com/avatar8.jpg",
+        thumb: avatarHombre(),
         comentario: "¡Impresionante! Necesito una nueva TV.",
       },
       {
         usuario: "Lucía Gadget",
-        thumb: "https://example.com/avatar9.jpg",
+        thumb: avatarMujer(),
         comentario: "¡No puedo esperar para ver qué ofertas tienen!",
       },
     ],
@@ -290,12 +256,12 @@ export const posts = [
     comments: [
       {
         usuario: "Martina Art",
-        thumb: "https://example.com/avatar11.jpg",
+        thumb: avatarMujer(),
         comentario: "¡Me encantaría participar en esto!",
       },
       {
         usuario: "Diego Creative",
-        thumb: "https://example.com/avatar12.jpg",
+        thumb: avatarHombre(),
         comentario: "¡Definitivamente me apunto!",
       },
     ],
@@ -319,12 +285,12 @@ export const posts = [
     comments: [
       {
         usuario: "Miguel Ilusionista",
-        thumb: "https://example.com/avatar14.jpg",
+        thumb: avatarHombre(),
         comentario: "¡Estoy emocionado por esto!",
       },
       {
         usuario: "Claudia Magia",
-        thumb: "https://example.com/avatar15.jpg",
+        thumb: avatarMujer(),
         comentario:
           "¡Qué oportunidad tan increíble para disfrutar de un buen espectáculo!",
       },
