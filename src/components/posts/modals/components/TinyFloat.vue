@@ -1,7 +1,7 @@
 <script setup>
   import { ref } from 'vue'
   const props = defineProps({
-    status: String, 
+    status: Object, 
     type: String
   });
 
@@ -24,14 +24,19 @@
 </script>
 <template>
     <div class="tiny-modal" :style="`max-height: ${(status)? 'fit-content' : '0px'};`">
-        <button class="option" v-if="props.type == 'comercio'" v-for="option in options" >
+      <template  v-if="props.type == 'comercio'">
+        <button class="option" v-for="option in options" >
           <iconify-icon :icon="option.icon"></iconify-icon>
           <span> {{ option.name }} </span>
         </button>
-        <button class="option" v-if="props.type == 'ayuntamiento'" v-for="option in optionsAyuntamientos" >
+      </template>
+      <template  v-if="props.type == 'ayuntamiento'">
+        <button class="option" v-for="option in optionsAyuntamientos" >
           <iconify-icon :icon="option.icon"></iconify-icon>
           <span> {{ option.name }}</span>
         </button>
+      </template>
+      
       </div>
 </template>
 <style scoped lang="scss">

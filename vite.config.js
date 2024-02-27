@@ -17,7 +17,7 @@ export default defineConfig({
       'vue': '@vue/compat',
       '~/bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
       '~/bootstrap-vue': path.resolve(__dirname, 'node_modules/bootstrap-vue'),
-      // 'vue-router': path.resolve(__dirname, 'node_modules/vue-router/dist/vue-router.global.js')
+      
     }
   }
 })

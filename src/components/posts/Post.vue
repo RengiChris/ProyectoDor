@@ -7,7 +7,7 @@
   import { share } from './helpers/share.js';
 
   const props = defineProps({
-    post: Array
+    post: Object
   });
 
   const post = props.post;
@@ -24,11 +24,9 @@
     if (!status) {
       refs.modalTargetStatus.value = true;
       status = true;
-      profileButton.dataset.status = "true";
     } else {
       status = false;
       refs.modalTargetStatus.value = false;
-
     }
   }
 
@@ -95,7 +93,7 @@
         <button :id="'boton_like_' + post.id" @click="() => increaseLike(props.post)">
           <iconify-icon icon="mdi:like"></iconify-icon> <b :id="'likes_' + post.id">{{ refs.likes }}</b>
         </button>
-        <button @click="(e) => showComments(e)">
+        <button @click="redirect(post.id)">
           <iconify-icon icon="icon-park-outline:comments"></iconify-icon> {{ props.post.comments.length }}
         </button>
         <button @click="() => share(props.post)">
@@ -120,6 +118,13 @@
     }
     h3 {
       color: $highlight !important;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      object-fit: scale-down;
+      object-position: center;
     }
 
     .post-header {
@@ -165,7 +170,9 @@
           border-radius: 50%;
           object-fit: cover !important;
         }
+       
       }
+    
     }
 
     /*nested*/
@@ -179,7 +186,7 @@
       align-items: center;
       flex-direction: row;
       width: 80px;
-      iconify-icon {
+      svg {
         margin-right: 5px;
       }
     }
@@ -192,17 +199,19 @@
       transition: all .4s ease-in-out;
     }
 
-    .avatar {
-      width: 60px;
-      height: 60px;
-      object-fit: scale-down;
-      object-position: center;
-    }
+    
 
-    .card-body h3 {
-      font-size: 1.1rem;
-      cursor: pointer;
+    .card-body {
+      h3 {
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+      .liked {
+        background: #80ED99 !important;
+        color: white !important;
+      }
     }
+    .card-body 
 
     img {
       border-radius: 10px;
@@ -220,7 +229,7 @@
         font-size: 1.1rem !important;
         height: 20px;
 
-        .priority-icon iconify-icon {
+        .priority-icon iconify-icon, .priority-icon svg {
           font-size: 1.5rem;
           display: flex;
         }
@@ -231,10 +240,7 @@
         font-size: .8rem;
       }
 
-      button.liked {
-        background: $highlight !important;
-        color: white !important;
-      }
+      
 
       button:hover {
         opacity: .7;

@@ -8,7 +8,6 @@
     const filterPost = (e, tag) => {
         let posts = document.getElementsByClassName("post");
         Array.from(posts).forEach(post => {
-            console.log(post);
             if(post.dataset.category.includes(tag) || tag == "Todos") {
                 post.style.display = "flex";
             } else {

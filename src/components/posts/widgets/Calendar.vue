@@ -6,7 +6,7 @@
         type: String,
         posts: Array, 
         dates: Array,
-        post_per_date: Array
+        post_per_date: Function
     });
 
     onMounted(() => {

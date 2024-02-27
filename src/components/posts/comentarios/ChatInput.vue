@@ -1,5 +1,5 @@
 <script setup>
-    import { ref, watch } from 'vue'
+    import { ref } from 'vue'
     const props = defineProps([
         'post'
     ]);
@@ -32,7 +32,7 @@
         }
         
     }
-    console.log(`comentarios ${comentarios.value}`);
+
     
 </script>
 

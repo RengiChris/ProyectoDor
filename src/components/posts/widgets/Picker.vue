@@ -52,6 +52,7 @@
 
   });
 </script>
+<template></template>
 <style>
   .customPicker {
     display: none;

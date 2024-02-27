@@ -1,6 +1,6 @@
 <script setup>
     const props = defineProps({
-        comment: Array
+        comment: Object
     });
 </script>
 <template>

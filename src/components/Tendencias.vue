@@ -14,12 +14,18 @@
         <a id="back" href="/"><iconify-icon icon="ep:back"></iconify-icon></a>
         <h3 class="alert">Estás viendo el feed de {{ tendencia }}</h3>
         <CrearPost v-if="posts.length >= 1" />
-        <div v-for="post in posts" v-if="posts.length >= 1">
-          <Post :post="post" />
-        </div>
-        <div v-else>
-          <h6 class="alert">No se ha encontrado el contenido que buscas</h6>
-        </div>
+          <template v-if="posts.length >= 1">
+            <div  v-for="post in posts" >
+              <Post :post="post" />
+            </div>
+          </template>
+          <template  v-else>
+            <div>
+              <h6 class="alert">No se ha encontrado el contenido que buscas</h6>
+            </div>
+          </template>
+       
+       
       </div>
       <div class="col col-sm-3"></div>
     </div>

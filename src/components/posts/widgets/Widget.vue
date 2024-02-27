@@ -13,12 +13,14 @@
         <div class="card-body">
           <h5 class="card-title">{{title}}</h5>
           <p class="card-text">{{desc}}</p>
-          <div class="list" v-if="props.list" v-for="list in props.list">
-            <button>
-              <iconify-icon icon="gg:hashtag"></iconify-icon> 
-              {{list}}  
-            </button>
-          </div>
+          <template  v-if="props.list">
+            <div class="list" v-for="list in props.list">
+              <button>
+                <iconify-icon icon="gg:hashtag"></iconify-icon> 
+                {{list}}  
+              </button>
+            </div>
+          </template>
           <a v-if="props.button_url" href="#" class="btn btn-primary">{{props.button_desc}}</a>
         </div>
       </div>

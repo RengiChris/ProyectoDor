@@ -54,7 +54,7 @@
             <button :id="'boton_like_' + post.id" @click="(e) => increaseLike(e)">
               <iconify-icon icon="mdi:like"></iconify-icon> <b :id="'likes_' + post.id">{{ refs.likes }}</b>
             </button>
-            <button @click="(e) => showComments(e)">
+            <button >
               <iconify-icon icon="icon-park-outline:comments"></iconify-icon> {{ post.comments.length }}
             </button>
             <button @click="() => share(post)">
@@ -98,7 +98,7 @@
     font-size:1.4rem;
   }
 
-  #back  iconify-icon {
+  #back  svg {
     font-size:2rem;
     margin-right:20px;
   }
@@ -139,7 +139,7 @@
       border-bottom: 1px solid rgb(206, 206, 206);
     }
 
-    button iconify-icon {
+    button svg {
       margin-right: 5px;
     }
 
