@@ -36,10 +36,7 @@
 <template>
   <div class="row justify-content-lg-center">
     <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6  ">
-      <a id="back" href="/">
-        <iconify-icon icon="ep:back"></iconify-icon>
-        Publicaciones
-      </a>
+
       <div class="post card flex-md-column box-shadow h-md-250  m-0 mt-xl-5 mb-xl-4 mt-xl-5 mt-lg-5  border-0" v-bind:data-category="post.tag">
         <img id="img_post" class="card-img-right flex-auto d-md-block" :src="post.thumb" alt="Thumbnail [200x250]"
           style="max-height: 650px; object-fit:scale-down; object-position:left;"
