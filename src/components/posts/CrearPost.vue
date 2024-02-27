@@ -38,7 +38,7 @@
     font-size: 1rem;
   }
 
-  .aviso iconify-icon {
+  .aviso svg {
     margin-right: 10px;
     color: $alert;
     font-size: 1.8rem;
