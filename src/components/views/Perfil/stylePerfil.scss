@@ -1,0 +1,222 @@
+@import "variables";
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('./assets/fonts/ibm_plex/IBMPlexSans-Bold.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#app {
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Poppins";
+    background: $blanco;
+
+}
+
+a {
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    border-radius: $radioBordes;
+    border: 2px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: $verde;
+    color: $negro;
+    cursor: pointer;
+    transform: 0.3s;
+}
+
+button:hover {
+    border: 2px solid transparent;
+    border-color: $blanco;
+}
+
+
+img {
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+h3,
+h6 {
+    color: $negro;
+    font-weight: 700;
+    margin: 0.5rem;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+#main {
+    padding: 2rem 0px;
+    margin: 0px 2rem;
+    padding-bottom: 4rem;
+    font-family: 'Poppins';
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#contenedorFoto {
+    @include column_center;
+}
+
+#contenedorFoto img {
+    width: 120px;
+    height: 120px;
+}
+
+button {
+    transition: 0.2s;
+    height: 37px;
+    padding: 5px 10px;
+    border-radius: $radioBordes;
+}
+
+button:hover {
+    border: 2px solid $negro;
+}
+
+#contenedorFollows {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    cursor: pointer;
+
+    div {
+        padding: 5px 10px;
+        border: 1px solid $blanco;
+        background-color: $verde;
+        color: $negro;
+        font-weight: 500;
+    }
+
+}
+
+#intereses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.apartado {
+
+    width: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    @include white_box;
+
+
+    h3 {
+        margin-left: 0.5rem;
+    }
+
+    a {
+        color: #0d6efd;
+        font-size: 16px;
+        margin: 5px 5px;
+        width: fit-content;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        background-color: $blanco;
+        cursor: pointer;
+        border-radius: $radioBordes;
+    }
+
+}
+
+a:hover {
+    color: #22577A;
+}
+
+p {
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+#marco {
+
+    @include row_center;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    h3,
+    h6 {
+        text-align: center;
+    }
+
+    .seccion {
+
+        @include row_center;
+        flex-wrap: wrap;
+        padding: 0.5rem;
+
+        #contenedorFollows {
+            div {
+                margin: 0;
+            }
+        }
+
+        div {
+            border-radius: $radioBordes;
+            margin: 0.5rem;
+        }
+
+    }
+}
+
+.datos {
+    @include row_center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 1rem;
+
+    .apartado {
+        display: flex;
+        width: inherit;
+    }
+}

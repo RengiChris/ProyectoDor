@@ -1,0 +1,250 @@
+@import "variables";
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('./assets/fonts/ibm_plex/IBMPlexSans-Bold.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#app {
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Poppins";
+    background: $blanco;
+
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    border-radius: $radioBordes;
+    border: 2px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: $verde;
+    color: $negro;
+    cursor: pointer;
+    transform: 0.3s;
+}
+
+button:hover {
+    border: 2px solid $negro;
+    border-color: $blanco;
+}
+
+#contenedorFoto {
+
+    @include column_center;
+
+    h5{
+        margin: 1rem 0 2rem 0;
+        font-size: 1.2rem;
+        color: $verde;
+    }
+
+    h5:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+}
+
+a {
+    color: $verde;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+img {
+    margin: 1rem;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 460px) {
+    img {
+        height: 220px;
+        width: 220px;
+    }
+}
+
+
+img:hover {
+    filter: drop-shadow(0px 0px 2px $verde);
+}
+
+
+h5 {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    color: $negro;
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: unset;
+    font-size: 0.95rem;
+}
+
+#main {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin: 0 1rem;
+    color: $negro;
+}
+
+
+.formu {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 20px 0px;
+    font-family: 'Arial';
+    font-size: 13px;
+}
+
+.formu input,
+#select {
+    color: $negro;
+    display: flex;
+    background-color: transparent;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid $negro;
+    margin-bottom: 1.8rem;
+    transition: 0.3s;
+    font-family: 'Poppins';
+    font-size: 0.9rem;
+}
+
+.formu input:focus,
+#select:focus {
+
+    height: 30px;
+    border-bottom: 1px solid $verde;
+    outline: none;
+
+}
+
+.formu #fechaNac {
+    width: 120px;
+    flex-direction: row-reverse;
+    text-align: center;
+    border: 1px solid $negro;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.3s;
+    font-family: monospace;
+    font-size: unset;
+}
+
+button {
+    margin: 30px 0px;
+    transition: 0.2s;
+}
+
+button:hover {
+    border: 2px solid $negro;
+}
+
+#fechaNac:hover {
+    cursor: text;
+    filter: drop-shadow(0px 0px 2px $verde);
+}
+
+#fechaNac::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+.caja {
+    @include white_box;
+    min-width: 300px;
+}
+
+#contenedorFormu {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+
+#intereses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
+}
+
+.apartado {
+
+    width: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    @include white_box;
+    margin: 0 ;
+    color: #0d6efd;
+
+
+    a {
+        font-size: 16px;
+        margin: 5px 5px;
+        width: fit-content;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        background-color: $blanco;
+        cursor: pointer;
+        border-radius: $radioBordes;
+    }
+
+    
+
+}
+
+

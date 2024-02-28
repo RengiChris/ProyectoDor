@@ -1,0 +1,10 @@
+/* fuentes */
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IBM';
+    src: url('./assets/fonts/ibm_plex/IBMPlexSans-Bold.ttf') format('truetype');
+}

@@ -1,0 +1,27 @@
+$negro: #212529;
+$verde: #80ED99;
+$blanco: #F7F7F7;
+$sombras: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+$radioBordes: 5px;
+
+@mixin row_center() {
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;
+}
+
+@mixin column_center() {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin white_box(){
+    background-color: #ffffff;
+    box-shadow: $sombras;
+    border-radius: $radioBordes;
+    padding: 1rem;
+    margin: 1rem;
+}
