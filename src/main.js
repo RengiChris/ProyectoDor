@@ -12,7 +12,6 @@ import "~/bootstrap/dist/css/bootstrap.min.css";
 import "~/bootstrap-vue/dist/bootstrap-vue.min.css";
 
 
-
 const app = createApp(App);
 app.component('iconify-icon', Icon);
 app.use(router);

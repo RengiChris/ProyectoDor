@@ -5,6 +5,10 @@
     import { posts } from '../../../assets/posts.js';
     const postsActuales = posts;
     import DefaultButton from "./../../contenido_perfil/DefaultButton.vue";
+    import router from './../../../router.js'
+    const redirect = () => {
+      router.push('/perfil/comercio');
+    }
 </script>
 <template>
     <div class="d-flex flex-column justify-content-center align-items-center">
@@ -23,6 +27,9 @@
           <div id="editDiv">
             <router-link to="/edit_form"><DefaultButton value="Editar"/></router-link>
           </div>
+          <button class="btn btn-primary mt-2 bg-success border-0 text-white w-25" @click="redirect()">
+            Atrás
+          </button>
           
         </section>
       </article>

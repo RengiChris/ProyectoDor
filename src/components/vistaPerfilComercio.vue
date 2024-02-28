@@ -3,7 +3,12 @@
 import ProfilePicture from './ProfilePicture.vue';
 import  Post from './Post.vue';
 import { posts } from '../assets/posts';
+import router from '../router';
 const postsActuales = posts;
+
+const redirect = () => {
+    router.push('/perfil/contenido');
+}
 </script>
 
 <template>
@@ -19,6 +24,7 @@ const postsActuales = posts;
           <p><span class="negrita">Teléfono: </span>922876765</p>
           <p><span class="negrita">Dirección: </span>C/ Carlos Francisco Lorenzo Navarro, 23, 38760, Los Llanos de Aridane</p>
           <span class="badge d-flex align-items-center text-verdeApp bg-primary border border-verdeApp rounded-pill letraBadge">Tienda de Informática</span>
+          <button class="btn btn-primary mt-2 bg-success border-0" @click="redirect()">Cambiar a vista comercio logueado</button>
         </section>
       </article>
     </section>

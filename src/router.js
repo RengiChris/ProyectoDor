@@ -9,7 +9,10 @@ import  EditForm  from "./components/views/EditForm/EditForm.vue"
 import ProfileContent from "./components/views/ProfileContent/ProfileContent.vue"
 /* rengifo */
 import Perfil from "./components/views/Perfil/Perfil.vue"
-import PerfilEdit from "./components/views/Perfil/PerfilEdit.vue"
+import PerfilEdit from "./components/views/Perfil/PerfilEdit.vue";
+import Login from './components/views/Login.vue'
+import Registro from './components/views/Registro.vue'
+
 export const routes = [
   {
     name: "Inicio" /* <Nombre /> */,
@@ -62,7 +65,19 @@ export const routes = [
     component: PerfilEdit, 
     visible: false
   },
-
+  /*- Domingo -*/
+  { 
+    path:"/login", 
+    name: "Login",
+    component: Login, 
+    visible: false
+  },
+  { 
+    path:"/registro", 
+    name: "Register",
+    component: Registro, 
+    visible: false
+  }
 ];
 
 export const router = createRouter({

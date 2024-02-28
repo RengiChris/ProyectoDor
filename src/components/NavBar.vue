@@ -30,6 +30,7 @@ window.addEventListener("resize", ()=>{
             <img src="/logoPocho.png" alt="Logo de la aplicacion" class="img-fluid">
             <a href="/" v-if="!mobile">Inicio</a>
             <a href="/" v-else ><HomeIcon class="home"/></a>
+            <a href="/login">Login</a>
             <a href="#">Cerrar Sesión</a>
         </div>
         <div class="botones">

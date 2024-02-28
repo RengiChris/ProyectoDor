@@ -1,5 +1,6 @@
 <script setup>
   import { ref } from 'vue'
+import router from '../../../../router';
   const props = defineProps({
     status: Object, 
     type: String
@@ -21,17 +22,21 @@
       url: '/perfil/ayuntamiento' /* cambiar por el perfil de la empresa o cliente ?? */
     }
   ];
+
+  const redirect = (url) => {
+    router.push(url)
+  }
 </script>
 <template>
     <div class="tiny-modal" :style="`max-height: ${(status)? 'fit-content' : '0px'};`">
       <template  v-if="props.type == 'comercio'">
-        <button class="option" v-for="option in options" >
+        <button class="option" v-for="option in options" @click="redirect(option.url)">
           <iconify-icon :icon="option.icon"></iconify-icon>
           <span> {{ option.name }} </span>
         </button>
       </template>
       <template  v-if="props.type == 'ayuntamiento'">
-        <button class="option" v-for="option in optionsAyuntamientos" >
+        <button class="option" v-for="option in optionsAyuntamientos" @click="redirect(option.url)" >
           <iconify-icon :icon="option.icon"></iconify-icon>
           <span> {{ option.name }}</span>
         </button>
