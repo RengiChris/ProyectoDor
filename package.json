@@ -1,0 +1,26 @@
+{
+  "name": "interfaz-proyecto",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emoji-mart/data": "^1.1.2",
+    "@iconify/vue": "^4.1.1",
+    "@vue/compat": "^3.4.18",
+    "bootstrap": "^5.3.2",
+    "bootstrap-vue": "^2.23.1",
+    "emoji-mart": "^5.5.2",
+    "sass": "^1.70.0",
+    "vue": "^3.3.11",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "vite": "^5.1.4"
+  }
+}
